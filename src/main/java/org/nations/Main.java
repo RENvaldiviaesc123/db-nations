@@ -18,10 +18,10 @@ public class Main {
         //Inizializzamo lo scanner
         Scanner scan = new Scanner(System.in);
 
-        System.out.print(" PAESE " );
-        System.out.print(" ID PAESE ");
-        System.out.print(" REGIONE ");
-        System.out.print(" CONTINENTE ");
+        System.out.print("     PAESE     " );
+        System.out.print("     ID PAESE     ");
+        System.out.print("     REGIONE     ");
+        System.out.print("     CONTINENTE     ");
         //Mi connetto al database
         try (Connection connection = DriverManager.getConnection(DB_URL,DB_USER,DB_PASSWORD)){
             //Preparo la query della milestone 1
@@ -34,13 +34,10 @@ public class Main {
                         String continents = rs.getString("continent_name");
                         //Stampiamo i risultati
                         System.out.println("");
-                        System.out.print("  " + nomePaese + "  ");
-
-                        System.out.print("  " +id + "  ");
-
-                        System.out.print("  " +regions + "  ");
-
-                        System.out.print("  " +continents + "  ");
+                        System.out.print("     " + nomePaese + "  ");
+                        System.out.print("     " + id + "  ");
+                        System.out.print("     " + regions + "  ");
+                        System.out.print("     " + continents + "  ");
                         System.out.println("");
                     }
                 }
@@ -50,27 +47,29 @@ public class Main {
             System.out.println("Cerca un paese per nome: ");
             String choice =scan.nextLine();
             System.out.println("Risultati contenenti: " + choice);
-            System.out.print(" PAESE " );
-            System.out.print(" ID PAESE ");
-            System.out.print(" REGIONE ");
-            System.out.print(" CONTINENTE ");
+            System.out.print("     PAESE     " );
+            System.out.print("     ID PAESE     ");
+            System.out.print("     REGIONE     ");
+            System.out.print("     CONTINENTE     ");
             try (PreparedStatement ps = connection.prepareStatement(QUERY_MILESTONE_THREE)) {
                 ps.setString(1,"%" + choice + "%");
                 //Eseguo la query
                 try(ResultSet rs = ps.executeQuery()){
-                    if (rs.next()) {
+                    while (rs.next()) {
                         String nomePaese = rs.getString("country_name");
                         int id = rs.getInt("country_id");
                         String regions = rs.getString("region_name");
                         String continents = rs.getString("continent_name");
                         //Stampiamo il risultato
-                        System.out.println("  " + nomePaese + "  ");
-                        System.out.print("  " + id + "  ");
-                        System.out.print("  " + regions + "  ");
-                        System.out.print("  " + continents + "  ");
-                    } else {
                         System.out.println("");
-                        System.out.println("0 risultati trovati con: " + choice);
+                        System.out.print("     " + nomePaese + "  ");
+                        System.out.print("     " + id + "  ");
+                        System.out.print("     " + regions + "  ");
+                        System.out.print("     " + continents + "  ");
+                        System.out.println("");
+                    } if(!rs.next()) {
+                        System.out.println("");
+                        System.out.println("Fine risultati con: " + choice);
                     }
                 }
             }
