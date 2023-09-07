@@ -12,7 +12,7 @@ public class Main {
     //Le query da eseguire
     private static final String QUERY_MILESTONE_ONE = "select countries.name as country_name, countries.country_id as country_id, regions.name as region_name, continents.name as continent_name from countries join regions on regions.region_id  = countries.region_id join continents on continents.continent_id = regions.continent_id order by countries.name;";
     private static final String QUERY_MILESTONE_THREE = "select countries.name as country_name, countries.country_id as country_id, regions.name as region_name, continents.name as continent_name from countries join regions on regions.region_id  = countries.region_id join continents on continents.continent_id = regions.continent_id  where countries.name like ? order by countries.name;";
-    private static final String QUERY_BONUS_MILESTONE = "";
+    private static final String QUERY_BONUS_MILESTONE = "select  countries.country_id as id, countries.name as nome , languages.language as lingue, country_stats.year as anno_riferimento, country_stats.population as popolazione, country_stats.gdp as pil from countries join country_languages on country_languages.country_id = countries.country_id join languages on languages.language_id = country_languages.language_id join country_stats on country_stats.country_id = countries.country_id where countries.country_id  like ? and country_stats.year = 2018;";
 
     public static void main(String[] args) {
         //Inizializzamo lo scanner
@@ -74,6 +74,32 @@ public class Main {
                 }
             }
 
+            //BONUS
+            System.out.println("Guarda altre informazione di questi paesi scrivendo qui il suo id: ");
+            int choiceId = Integer.parseInt(scan.nextLine());
+            try (PreparedStatement ps = connection.prepareStatement(QUERY_BONUS_MILESTONE)){
+                ps.setInt(1,choiceId);
+                try(ResultSet rs = ps.executeQuery()){
+                    if (rs.next()) {
+                        String id = rs.getString("id");
+                        String nomePaese = rs.getString("nome");
+                        String lingue = rs.getString("lingue");
+                        int anno = rs.getInt("anno_riferimento");
+                        int popolazione = rs.getInt("popolazione");
+                        int pil = rs.getInt("pil");
+                        //Stampiamo il Risultato
+                        System.out.println("Paese scelto: " + nomePaese);
+                        System.out.println("Lingue parlate: " + lingue);
+                        System.out.println("Anno di riferimento: " + anno);
+                        System.out.println("Popolazione: " + popolazione);
+                        System.out.println("PIL: " + pil);
+                    } else {
+                        System.out.println("");
+                        System.out.println("Erroreeee");
+                    }
+
+                }
+            }
 
         } catch (SQLException exception) {
             System.out.println("");

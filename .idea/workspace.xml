@@ -4,7 +4,7 @@
     <option name="autoReloadType" value="SELECTIVE" />
   </component>
   <component name="ChangeListManager">
-    <list default="true" id="371805d4-dcb6-4223-a658-100f70549229" name="Changes" comment="Fixed join part on queries">
+    <list default="true" id="371805d4-dcb6-4223-a658-100f70549229" name="Changes" comment="Finished Milestone 3">
       <change beforePath="$PROJECT_DIR$/src/main/java/org/nations/Main.java" beforeDir="false" afterPath="$PROJECT_DIR$/src/main/java/org/nations/Main.java" afterDir="false" />
     </list>
     <option name="SHOW_DIALOG" value="false" />
@@ -76,7 +76,15 @@
       <option name="project" value="LOCAL" />
       <updated>1694083621313</updated>
     </task>
-    <option name="localTasksCounter" value="5" />
+    <task id="LOCAL-00005" summary="Finished Milestone 3">
+      <option name="closed" value="true" />
+      <created>1694084021571</created>
+      <option name="number" value="00005" />
+      <option name="presentableId" value="LOCAL-00005" />
+      <option name="project" value="LOCAL" />
+      <updated>1694084021571</updated>
+    </task>
+    <option name="localTasksCounter" value="6" />
     <servers />
   </component>
   <component name="VcsManagerConfiguration">
@@ -84,6 +92,7 @@
     <MESSAGE value="Milestones 1 and 2" />
     <MESSAGE value="Doing Milestone 3" />
     <MESSAGE value="Fixed join part on queries" />
-    <option name="LAST_COMMIT_MESSAGE" value="Fixed join part on queries" />
+    <MESSAGE value="Finished Milestone 3" />
+    <option name="LAST_COMMIT_MESSAGE" value="Finished Milestone 3" />
   </component>
 </project>
