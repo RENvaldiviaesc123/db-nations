@@ -4,7 +4,7 @@
     <option name="autoReloadType" value="SELECTIVE" />
   </component>
   <component name="ChangeListManager">
-    <list default="true" id="371805d4-dcb6-4223-a658-100f70549229" name="Changes" comment="Created Maven project">
+    <list default="true" id="371805d4-dcb6-4223-a658-100f70549229" name="Changes" comment="Milestones 1 and 2">
       <change beforePath="$PROJECT_DIR$/.idea/workspace.xml" beforeDir="false" afterPath="$PROJECT_DIR$/.idea/workspace.xml" afterDir="false" />
       <change beforePath="$PROJECT_DIR$/src/main/java/org/nations/Main.java" beforeDir="false" afterPath="$PROJECT_DIR$/src/main/java/org/nations/Main.java" afterDir="false" />
     </list>
@@ -53,22 +53,20 @@
       <option name="project" value="LOCAL" />
       <updated>1694074265154</updated>
     </task>
-    <option name="localTasksCounter" value="2" />
+    <task id="LOCAL-00002" summary="Milestones 1 and 2">
+      <option name="closed" value="true" />
+      <created>1694077833760</created>
+      <option name="number" value="00002" />
+      <option name="presentableId" value="LOCAL-00002" />
+      <option name="project" value="LOCAL" />
+      <updated>1694077833760</updated>
+    </task>
+    <option name="localTasksCounter" value="3" />
     <servers />
   </component>
   <component name="VcsManagerConfiguration">
     <MESSAGE value="Created Maven project" />
-    <option name="LAST_COMMIT_MESSAGE" value="Created Maven project" />
-  </component>
-  <component name="XDebuggerManager">
-    <breakpoint-manager>
-      <breakpoints>
-        <line-breakpoint enabled="true" type="java-line">
-          <url>file://$PROJECT_DIR$/src/main/java/org/nations/Main.java</url>
-          <line>21</line>
-          <option name="timeStamp" value="1" />
-        </line-breakpoint>
-      </breakpoints>
-    </breakpoint-manager>
+    <MESSAGE value="Milestones 1 and 2" />
+    <option name="LAST_COMMIT_MESSAGE" value="Milestones 1 and 2" />
   </component>
 </project>
