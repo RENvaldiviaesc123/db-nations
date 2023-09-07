@@ -10,8 +10,8 @@ public class Main {
     private final static String DB_PASSWORD = "root";
 
     //Le query da eseguire
-    private static final String QUERY_MILESTONE_ONE = "select countries.name as country_name, countries.country_id as country_id, regions.name as region_name, continents.name as continent_name from countries join regions on regions.region_id  = countries.country_id join continents on continents.continent_id = regions.region_id order by countries.name;";
-    private static final String QUERY_MILESTONE_THREE = "select countries.name as country_name, countries.country_id as country_id, regions.name as region_name, continents.name as continent_name from countries join regions on regions.region_id  = countries.country_id join continents on continents.continent_id = regions.region_id where countries.name like '%?%' order by countries.name;";
+    private static final String QUERY_MILESTONE_ONE = "select countries.name as country_name, countries.country_id as country_id, regions.name as region_name, continents.name as continent_name from countries join regions on regions.region_id  = countries.region_id join continents on continents.continent_id = regions.continent_id order by countries.name;";
+    private static final String QUERY_MILESTONE_THREE = "select countries.name as country_name, countries.country_id as country_id, regions.name as region_name, continents.name as continent_name from countries join regions on regions.region_id  = countries.region_id join continents on continents.continent_id = regions.continent_id  where countries.name like ? order by countries.name;";
     private static final String QUERY_BONUS_MILESTONE = "";
 
     public static void main(String[] args) {
@@ -55,7 +55,7 @@ public class Main {
             System.out.print(" REGIONE ");
             System.out.print(" CONTINENTE ");
             try (PreparedStatement ps = connection.prepareStatement(QUERY_MILESTONE_THREE)) {
-                ps.setString(1,choice);
+                ps.setString(1,"%" + choice + "%");
                 //Eseguo la query
                 try(ResultSet rs = ps.executeQuery()){
                     if (rs.next()) {

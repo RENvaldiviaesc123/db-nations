@@ -4,7 +4,7 @@
     <option name="autoReloadType" value="SELECTIVE" />
   </component>
   <component name="ChangeListManager">
-    <list default="true" id="371805d4-dcb6-4223-a658-100f70549229" name="Changes" comment="Milestones 1 and 2">
+    <list default="true" id="371805d4-dcb6-4223-a658-100f70549229" name="Changes" comment="Doing Milestone 3">
       <change beforePath="$PROJECT_DIR$/.idea/workspace.xml" beforeDir="false" afterPath="$PROJECT_DIR$/.idea/workspace.xml" afterDir="false" />
       <change beforePath="$PROJECT_DIR$/src/main/java/org/nations/Main.java" beforeDir="false" afterPath="$PROJECT_DIR$/src/main/java/org/nations/Main.java" afterDir="false" />
     </list>
@@ -61,12 +61,21 @@
       <option name="project" value="LOCAL" />
       <updated>1694077833760</updated>
     </task>
-    <option name="localTasksCounter" value="3" />
+    <task id="LOCAL-00003" summary="Doing Milestone 3">
+      <option name="closed" value="true" />
+      <created>1694082668611</created>
+      <option name="number" value="00003" />
+      <option name="presentableId" value="LOCAL-00003" />
+      <option name="project" value="LOCAL" />
+      <updated>1694082668611</updated>
+    </task>
+    <option name="localTasksCounter" value="4" />
     <servers />
   </component>
   <component name="VcsManagerConfiguration">
     <MESSAGE value="Created Maven project" />
     <MESSAGE value="Milestones 1 and 2" />
-    <option name="LAST_COMMIT_MESSAGE" value="Milestones 1 and 2" />
+    <MESSAGE value="Doing Milestone 3" />
+    <option name="LAST_COMMIT_MESSAGE" value="Doing Milestone 3" />
   </component>
 </project>
