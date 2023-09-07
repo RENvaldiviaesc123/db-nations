@@ -93,7 +93,15 @@
       <option name="project" value="LOCAL" />
       <updated>1694086431550</updated>
     </task>
-    <option name="localTasksCounter" value="7" />
+    <task id="LOCAL-00007" summary="To finish bonus milestone">
+      <option name="closed" value="true" />
+      <created>1694088527029</created>
+      <option name="number" value="00007" />
+      <option name="presentableId" value="LOCAL-00007" />
+      <option name="project" value="LOCAL" />
+      <updated>1694088527029</updated>
+    </task>
+    <option name="localTasksCounter" value="8" />
     <servers />
   </component>
   <component name="VcsManagerConfiguration">
@@ -104,16 +112,5 @@
     <MESSAGE value="Finished Milestone 3" />
     <MESSAGE value="To finish bonus milestone" />
     <option name="LAST_COMMIT_MESSAGE" value="To finish bonus milestone" />
-  </component>
-  <component name="XDebuggerManager">
-    <breakpoint-manager>
-      <breakpoints>
-        <line-breakpoint enabled="true" type="java-line">
-          <url>file://$PROJECT_DIR$/src/main/java/org/nations/Main.java</url>
-          <line>82</line>
-          <option name="timeStamp" value="1" />
-        </line-breakpoint>
-      </breakpoints>
-    </breakpoint-manager>
   </component>
 </project>

@@ -77,6 +77,7 @@ public class Main {
             //BONUS
             System.out.println("Guarda altre informazione di questi paesi scrivendo qui il suo id: ");
             int choiceId = Integer.parseInt(scan.nextLine());
+            System.out.println(choiceId);
             try (PreparedStatement ps = connection.prepareStatement(QUERY_BONUS_MILESTONE)){
                 ps.setInt(1,choiceId);
                 try(ResultSet rs = ps.executeQuery()){
@@ -92,8 +93,8 @@ public class Main {
                         System.out.println("Anno di riferimento: " + anno);
                         System.out.println("Popolazione: " + popolazione);
                         System.out.println("PIL: " + pil);
-                    } if(!rs.next()) {
-                        System.out.println("");
+                    }  else {
+                        System.out.println(" ");
                         System.out.println("Scelta sbagliata ");}
 
                 }
@@ -103,30 +104,6 @@ public class Main {
             System.out.println("");
             System.out.println("An error ocurred");
         }
-
-
-
-
-
-
-
-
-
-
-
-
-
-
-
-
-
-
-
-
-
-
-
-
 
         //Chiudiamo lo scanner
         scan.close();
